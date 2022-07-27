@@ -1,0 +1,21 @@
+.k-grid thead{
+    background:   #79c0bf;
+}
+.k-grid-header .k-header {
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.k-grid th:first-child, .k-grid td:first-child {
+    border-left-width: 0;
+}
+
+.k-grid tr.k-alt{
+    background:   #8fbebe;
+}
+
+/* .k-grid-header, .k-header, th.k-header, .k-grid-header-wrap, .k-grouping-header, .k-grouping-header .k-group-indicator, .k-grid td, .k-grid-footer, .k-grid-footer-wrap, .k-grid-content-locked, .k-grid-footer-locked, .k-grid-header-locked, .k-filter-row > td, .k-filter-row > th{
+    border: 1px so
+} */

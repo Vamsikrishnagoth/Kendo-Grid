@@ -1,0 +1,65 @@
+
+ <kendo-grid [data]="gridData" [selectable]="{enabled: true, checkboxOnly: true}">
+  
+  <ng-template kendoGridToolbarTemplate>
+    <button kendoGridExcelCommand type="button" icon="file-excel">
+      Inpatient Prescription
+    </button>
+    <kendo-grid-spacer></kendo-grid-spacer>
+  </ng-template>
+  <!-- <kendo-grid-checkbox-column [width]="45" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
+  [columnMenu]="false" [showSelectAll]="true"></kendo-grid-checkbox-column>
+  <kendo-grid-column field="" title=""> </kendo-grid-column>
+  <kendo-grid-column title="command" [width]="100">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <kendo-icon name="photo-camera" size="default"></kendo-icon>
+    </ng-template>
+</kendo-grid-column>
+  <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+    <span class="k-icon k-i-calendar k-icon-32"></span>
+</ng-template>
+  <kendo-grid-column field="Prescription item" title="Prescription item"> </kendo-grid-column>
+  <kendo-grid-column field="Other information" title="Other information"> </kendo-grid-column>
+  <kendo-grid-column field="Start date" title="Start date"> </kendo-grid-column>
+  <kendo-grid-column field="Price" title="Price"> </kendo-grid-column> -->
+  <kendo-grid-column-group title="" [width]="600" [locked]="false">
+    <kendo-grid-checkbox-column [width]="50" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
+      [columnMenu]="false"></kendo-grid-checkbox-column>
+  </kendo-grid-column-group>
+  <kendo-grid-column-group title="" [width]="600" [locked]="false">
+    <kendo-grid-column>
+      <ng-template kendoGridHeaderTemplate let-column let-columnIndex="columnIndex">
+        <span class="k-icon k-i-calendar"></span>
+      </ng-template>
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+  
+    <kendo-grid-column>
+      <ng-template kendoGridHeaderTemplate let-column let-columnIndex="columnIndex">
+        <span class="k-icon k-i-calendar"></span>
+      </ng-template>
+    </kendo-grid-column>
+  <kendo-grid-column-group title="Prescription item" [width]="600" [locked]="false">
+    <kendo-grid-column field="Prescriptionitem" title="Investgation Delays" [width]="300" [locked]="false">
+
+    </kendo-grid-column>
+
+  </kendo-grid-column-group>
+  <kendo-grid-column-group title="Other Information" [width]="600" [locked]="false">
+
+    <kendo-grid-column field="Otherinformation" title="" [width]="300" [locked]="false">
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+
+  <kendo-grid-column-group title="Start Date" [width]="600" [locked]="false">
+
+    <kendo-grid-column field="Startdate" title="" [width]="300" [locked]="false">
+    </kendo-grid-column>
+    
+  </kendo-grid-column-group>
+  <kendo-grid-column-group title="" [width]="300" [locked]="false">
+
+    <kendo-grid-column field="" title="" [width]="300" [locked]="false">
+    </kendo-grid-column>
+  </kendo-grid-column-group>
+</kendo-grid>
