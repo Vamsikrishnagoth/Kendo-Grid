@@ -1,0 +1,32 @@
+.include-details{
+    float: right;
+    padding-bottom: 10px;
+}
+p{
+ font-weight: bold;
+    
+}
+
+
+ol li::marker {
+  content: "▶";
+  color: darkcyan;
+  
+}
+
+a{
+  text-decoration: none;
+  color: black;  
+}
+
+.navcheckbox{
+  color: #000;
+}
+
+.sub-heads p, label{
+  font-size: 13px;
+}
+
+.list{
+  font-size: 13px;
+}

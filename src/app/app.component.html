@@ -1,65 +1,110 @@
-
- <kendo-grid [data]="gridData" [selectable]="{enabled: true, checkboxOnly: true}">
-  
-  <ng-template kendoGridToolbarTemplate>
-    <button kendoGridExcelCommand type="button" icon="file-excel">
-      Inpatient Prescription
-    </button>
-    <kendo-grid-spacer></kendo-grid-spacer>
-  </ng-template>
-  <!-- <kendo-grid-checkbox-column [width]="45" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
-  [columnMenu]="false" [showSelectAll]="true"></kendo-grid-checkbox-column>
-  <kendo-grid-column field="" title=""> </kendo-grid-column>
-  <kendo-grid-column title="command" [width]="100">
-    <ng-template kendoGridCellTemplate let-dataItem>
-      <kendo-icon name="photo-camera" size="default"></kendo-icon>
-    </ng-template>
-</kendo-grid-column>
-  <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
-    <span class="k-icon k-i-calendar k-icon-32"></span>
-</ng-template>
-  <kendo-grid-column field="Prescription item" title="Prescription item"> </kendo-grid-column>
-  <kendo-grid-column field="Other information" title="Other information"> </kendo-grid-column>
-  <kendo-grid-column field="Start date" title="Start date"> </kendo-grid-column>
-  <kendo-grid-column field="Price" title="Price"> </kendo-grid-column> -->
-  <kendo-grid-column-group title="" [width]="600" [locked]="false">
-    <kendo-grid-checkbox-column [width]="50" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
-      [columnMenu]="false"></kendo-grid-checkbox-column>
-  </kendo-grid-column-group>
-  <kendo-grid-column-group title="" [width]="600" [locked]="false">
-    <kendo-grid-column>
-      <ng-template kendoGridHeaderTemplate let-column let-columnIndex="columnIndex">
-        <span class="k-icon k-i-calendar"></span>
+<div>
+<div class="sub-heads">
+  <div>
+  <p>Inpatient Encounter - Start date: 03-Sep-2012-ADULT MENTAL ILLNESS - Silpa Ragupathi - Open</p>
+</div>
+<div class="include-details">
+  <input type="checkbox" class="navcheckbox"> <label>Include cancelled items</label><br>
+  <input type="checkbox" class="navcheckbox" > <label>Include ALL completed / discontinued items</label>
+</div>
+</div>
+<div style="margin-top: 20px;">
+  <kendo-tabstrip style="width: 100%">
+    <kendo-tabstrip-tab title="Inpatient Prescription">
+      <ng-template kendoTabContent>
+         <kendo-grid [data]="gridData" [height]="400" >
+        
+          
+          <!-- <kendo-grid-checkbox-column [width]="45" [headerClass]="{ 'text-center': true }" [class]="{ 'text-center': true }" [resizable]="false"
+          [columnMenu]="false" [showSelectAll]="true"></kendo-grid-checkbox-column>
+          <kendo-grid-column field="" title=""> </kendo-grid-column>
+          <kendo-grid-column title="command" [width]="100">
+            <ng-template kendoGridCellTemplate let-dataItem>
+              <kendo-icon name="photo-camera" size="default"></kendo-icon>
+            </ng-template>
+        </kendo-grid-column>
+          <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+            <span class="k-icon k-i-calendar k-icon-32"></span>
+        </ng-template>
+          <kendo-grid-column field="Prescription item" title="Prescription item"> </kendo-grid-column>
+          <kendo-grid-column field="Other information" title="Other information"> </kendo-grid-column>
+          <kendo-grid-column field="Start date" title="Start date"> </kendo-grid-column>
+          <kendo-grid-column field="Price" title="Price"> </kendo-grid-column> -->
+          <kendo-grid-column-group title=""   [width]="50" [locked]="false">
+            <!-- <kendo-grid-checkbox-column  [width]="45" [headerClass]="{ 'text-center': true }" [resizable]="false"
+              [columnMenu]="false"></kendo-grid-checkbox-column> -->
+              <kendo-grid-column field="" [width]="50">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                  <input type="checkbox" *ngIf="dataItem.Discontinued" />
+                </ng-template>
+              </kendo-grid-column>
+            
+          </kendo-grid-column-group> 
+          <kendo-grid-column-group title="" [locked]="false">
+            <kendo-grid-column-group>
+              
+              <kendo-grid-column [width]="50">
+              </kendo-grid-column>
+            </kendo-grid-column-group>
+            
+          </kendo-grid-column-group>
+          
+          <kendo-grid-column-group title="" [locked]="false">
+            <kendo-grid-column-group >
+              
+              <kendo-grid-column [width]="50">
+                <ng-template kendoGridCellTemplate let-dataItem >
+                  <span *ngIf="!opened && dataItem.Discontinued " (click)="open()" class="k-icon k-i-calendar k-icon-32"></span>
+              </ng-template>
+              </kendo-grid-column>
+              
+            </kendo-grid-column-group>
+            
+          </kendo-grid-column-group>
+          <kendo-grid-column-group title="Prescription item" [locked]="false">
+            <kendo-grid-column  field="Prescriptionitem" title="Investgation Delays" [width]="300" [locked]="false">
+             <b></b> 
+            </kendo-grid-column>
+        
+          </kendo-grid-column-group>
+          <kendo-grid-column-group title="Other Information"  [locked]="false">
+        
+            <kendo-grid-column field="Otherinformation" title="" [width]="300" [locked]="false">
+            </kendo-grid-column>
+          </kendo-grid-column-group>
+        
+          <kendo-grid-column-group title="Start Date"  [locked]="false">
+        
+            <kendo-grid-column field="Startdate" title="" [width]="200" [locked]="false">
+            </kendo-grid-column>
+            
+          </kendo-grid-column-group>
+          <kendo-grid-column-group title=""  [locked]="false">
+        
+            <kendo-grid-column field="" title="" [width]="300" [locked]="false">
+            </kendo-grid-column>
+          </kendo-grid-column-group>
+        </kendo-grid>
+        <div>
+          <kendo-dialog title="Please confirm" *ngIf="opened" (close)="close('cancel')" [minWidth]="250" [width]="450">
+            <p style="margin: 30px; text-align: center;">Are you sure you want to continue?</p>
+            <kendo-dialog-actions>
+                <button kendoButton (click)="close('no')">No</button>
+                <button kendoButton (click)="close('yes')" themeColor="primary">Yes</button>
+            </kendo-dialog-actions>
+        </kendo-dialog>
+        </div>
+        <div class="list">
+          <ol class="detailed-list">
+            <li><a href="">Medication administration</a></li>
+            <li class="prescription"><a href="">Re-prescribe</a></li>
+          </ol>
+        </div>
       </ng-template>
-    </kendo-grid-column>
-  </kendo-grid-column-group>
-  
-    <kendo-grid-column>
-      <ng-template kendoGridHeaderTemplate let-column let-columnIndex="columnIndex">
-        <span class="k-icon k-i-calendar"></span>
-      </ng-template>
-    </kendo-grid-column>
-  <kendo-grid-column-group title="Prescription item" [width]="600" [locked]="false">
-    <kendo-grid-column field="Prescriptionitem" title="Investgation Delays" [width]="300" [locked]="false">
+    </kendo-tabstrip-tab>
+  </kendo-tabstrip>
+</div>
+</div>
 
-    </kendo-grid-column>
 
-  </kendo-grid-column-group>
-  <kendo-grid-column-group title="Other Information" [width]="600" [locked]="false">
 
-    <kendo-grid-column field="Otherinformation" title="" [width]="300" [locked]="false">
-    </kendo-grid-column>
-  </kendo-grid-column-group>
-
-  <kendo-grid-column-group title="Start Date" [width]="600" [locked]="false">
-
-    <kendo-grid-column field="Startdate" title="" [width]="300" [locked]="false">
-    </kendo-grid-column>
-    
-  </kendo-grid-column-group>
-  <kendo-grid-column-group title="" [width]="300" [locked]="false">
-
-    <kendo-grid-column field="" title="" [width]="300" [locked]="false">
-    </kendo-grid-column>
-  </kendo-grid-column-group>
-</kendo-grid>

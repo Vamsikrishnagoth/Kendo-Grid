@@ -1,21 +1,80 @@
-.k-grid thead{
-    background:   #79c0bf;
-}
-.k-grid-header .k-header {
-    font-family: monospace;
-    font-size: 15px;
-    font-weight: bold;
+*{
+    font-family : Verdana, Arial, Sans-Serif;
 }
 
+
+.k-grid thead{
+    background: linear-gradient(to bottom, #ccffff 0%, #66ffcc 100%);
+;
+}
+.k-grid-header .k-header {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    /* border-top: 10px solid red; */
+}
+.k-grid tr {
+    border-color: inherit;
+    background: #b8d2f05c;
+}
 
 .k-grid th:first-child, .k-grid td:first-child {
     border-left-width: 0;
 }
 
 .k-grid tr.k-alt{
-    background:   #8fbebe;
+    background:   #b8d2f0;
 }
 
-/* .k-grid-header, .k-header, th.k-header, .k-grid-header-wrap, .k-grouping-header, .k-grouping-header .k-group-indicator, .k-grid td, .k-grid-footer, .k-grid-footer-wrap, .k-grid-content-locked, .k-grid-footer-locked, .k-grid-header-locked, .k-filter-row > td, .k-filter-row > th{
-    border: 1px so
-} */
+.k-grid tr {
+    border-color: inherit;
+    
+}
+
+.k-grid-header, .k-header, th.k-header,.k-grid td, .k-grid-footer{
+    border: 0.1px solid #ffffff4d;
+}
+
+.k-grid td.k-state-selected, .k-grid td.k-selected, .k-grid tr.k-state-selected > td, .k-grid tr.k-selected > td {
+    background-color: whitesmoke;
+}
+.k-checkbox:checked, .k-checkbox.k-checked {
+    border-color: whitesmoke;
+    color: white;
+    background-color: green;
+}
+
+.detailed-list{
+    display: flex;
+}
+.prescription{
+    margin-left: 20px;
+}
+.k-icon{
+    cursor: pointer;
+}
+
+
+.investgation-delays:hover{
+    background-color:linear-gradient(to bottom, #ccffff 0%, #66ffcc 100%) !important;
+    color:none;
+}
+.showCheckbox{
+    display: none;
+  }
+
+  .k-grid td {
+    border-width: 0 0 0px 1px;
+    vertical-align: middle;
+    font-size: 11px;
+  }
+
+.filed{
+    font-size: 20px;
+}
+
+.k-button-text{
+    font-size: 11px;
+    padding: initial;
+    font-weight: bold;
+}
