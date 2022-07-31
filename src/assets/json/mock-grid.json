@@ -1,9 +1,6 @@
 [
     
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"mci check - tablet- Dose-5ml/kg/day - at night- fp10 generic v1",
         "Otherinformation":"submitted",
         "Startdate":"01-Dec-2021",
@@ -12,9 +9,6 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"vinorelbine - capsule - Dose conditional - oral - twice aday -fp10 genericv1 - 02-Dec-2021 10:37",
         "Otherinformation":"submitted",
         "Startdate":"02-Dec-2021",
@@ -23,20 +17,15 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"STAT/ONCE ONLY",
         "Otherinformation":"",
         "Startdate":"",
         "Discontinued":false,
+        "status": "STOPPED",
         "":""
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"gliclazide - tablet - Dose 60 mg - oral - stat -fp10 generic v1",
         "Otherinformation":"auto verified",
         "Startdate":"27-Apr-2021",
@@ -45,13 +34,11 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"REGULAR",
         "Otherinformation":"",
         "Startdate":"",
         "Discontinued":false,
+        "status": "STOPPED",
         "attributes":{
            "background":"red"
         },
@@ -59,9 +46,6 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"beclometasone - intravenous infusion - fp10 generic v1 - 12 - 34 MG/MINUTE - CONTINUOUS",
         "Otherinformation":"submitted",
         "Startdate":"01-Dec-2021",
@@ -70,9 +54,6 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"enoxaparin - clexane - injection - strength 80mg/0.8ml - DOSE 2mg - subcutaneous injection - three times a day local - fp10 generic v1",
         "Otherinformation":"submitted",
         "Startdate":"01-Dec-2021",
@@ -81,9 +62,6 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"enoxaparin - clexane - injection - strength 300mg/3ml - DOSE 2mg - subcutaneous injection -at night - fp10 generic v1",
         "Otherinformation":"submitted",
         "Startdate":"01-Dec-2021",
@@ -92,9 +70,6 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"enoxaparin - clexane - injection - strength 150mg/1ml - DOSE 2mg - subcutaneous injection - three times a day local - fp10 generic v1",
         "Otherinformation":"submitted",
         "Startdate":"01-Dec-2021",
@@ -103,9 +78,6 @@
      
     },
     {
-        "ProductID": 1,
-        "ProductName": "Chai",
-        "UnitPrice": 18,
         "Prescriptionitem":"mci calcium & sodium - infusion - epidural infusion - fp10 generic v1- 5 HOUR - 10ML/HOUR - CONTINUOUS",
         "Otherinformation":"submitted",
         "Startdate":"01-Dec-2021",
